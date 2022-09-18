@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "17a283fd-ff97-42da-8c9d-876114b34a46",
+		"name": "udaconnect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23155854"
+	},
+	"item": [
+		{
+			"name": "person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30003/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30003",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "person",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30003/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30003",
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "489"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.14"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 18 Sep 2022 18:03:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"company_name\": \"Alpha Omega Upholstery\",\n        \"last_name\": \"Fargo\",\n        \"first_name\": \"Taco\",\n        \"id\": 5\n    },\n    {\n        \"company_name\": \"USDA\",\n        \"last_name\": \"Shader\",\n        \"first_name\": \"Frank\",\n        \"id\": 6\n    },\n    {\n        \"company_name\": \"Hampton, Hampton and McQuill\",\n        \"last_name\": \"Trexler\",\n        \"first_name\": \"Pam\",\n        \"id\": 1\n    },\n    {\n        \"company_name\": \"Paul Badman & Associates\",\n        \"last_name\": \"Badman\",\n        \"first_name\": \"Paul\",\n        \"id\": 8\n    },\n    {\n        \"company_name\": \"The Chicken Sisters Restaurant\",\n        \"last_name\": \"Spring\",\n        \"first_name\": \"Otto\",\n        \"id\": 9\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30002/api/persons/5/connection?start_date=2020-01-01&end_date=2020-12-30&distance=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30002",
+					"path": [
+						"api",
+						"persons",
+						"5",
+						"connection"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2020-12-30"
+						},
+						{
+							"key": "distance",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "connection",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30002/api/persons/5/connection?start_date=2020-01-01&end_date=2020-12-30&distance=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30002",
+							"path": [
+								"api",
+								"persons",
+								"5",
+								"connection"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2020-12-30"
+								},
+								{
+									"key": "distance",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10444"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.14"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 18 Sep 2022 18:03:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 34\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 36\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 37\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 38\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 39\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 40\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 41\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 9,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 65\n        },\n        \"person\": {\n            \"id\": 9,\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\",\n            \"company_name\": \"The Chicken Sisters Restaurant\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 67\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 68\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.553441\",\n            \"latitude\": \"-122.290524\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-08-18T10:37:06\",\n            \"id\": 29\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.553441\",\n            \"latitude\": \"-122.290521\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 32\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.553451\",\n            \"latitude\": \"-122.290521\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-08-19T10:37:06\",\n            \"id\": 33\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 34\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 36\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 37\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 38\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 39\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 40\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 41\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 9,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 65\n        },\n        \"person\": {\n            \"id\": 9,\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\",\n            \"company_name\": \"The Chicken Sisters Restaurant\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 67\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 68\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719566\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 42\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719566\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-07-06T10:37:06\",\n            \"id\": 43\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719566\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 44\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719566\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 9,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 53\n        },\n        \"person\": {\n            \"id\": 9,\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\",\n            \"company_name\": \"The Chicken Sisters Restaurant\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719566\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 58\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719566\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 59\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719566\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-07-06T10:37:06\",\n            \"id\": 60\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719561\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-07-05T10:37:06\",\n            \"id\": 61\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719521\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-01-05T10:37:06\",\n            \"id\": 62\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"-106.5719521\",\n            \"latitude\": \"35.0585136\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-01-05T10:37:06\",\n            \"id\": 64\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 34\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 36\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 37\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 38\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 39\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 40\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 1,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 41\n        },\n        \"person\": {\n            \"id\": 1,\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\",\n            \"company_name\": \"Hampton, Hampton and McQuill\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 9,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 65\n        },\n        \"person\": {\n            \"id\": 9,\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\",\n            \"company_name\": \"The Chicken Sisters Restaurant\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 8,\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 67\n        },\n        \"person\": {\n            \"id\": 8,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\",\n            \"company_name\": \"Paul Badman & Associates\"\n        }\n    },\n    {\n        \"location\": {\n            \"longitude\": \"37.55363\",\n            \"latitude\": \"-122.290883\",\n            \"person_id\": 6,\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 68\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\",\n            \"company_name\": \"USDA\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}

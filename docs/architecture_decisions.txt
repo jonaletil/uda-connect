@@ -1,0 +1,16 @@
+Architecture decisions:
+
+In order to refactor the monolith application to microservice architecture, I created three new separate microservices:
+
+1. Person Microservice (REST API message passing)
+2. Connection Microservice (REST API message passing)
+3. Location Microservice (gRPC and Kafka message passing)
+
+- REST API
+Both Person and Connection microservices use REST API message passing technique.
+These services do not have special requirements, so using REST API is the best and most reliable solution with less complexity.
+
+-gRPC and Kafka
+Because we will be expecting a lot of data coming simultaneously (data streaming) from mobile devices in Location microservice, gRPC and Kafka message passing techniques are the best solution.
+gRPC enforces high performance and can run in any environment.
+Kafka is perfect for handling massive amount of data, and it is highly scalable and durable.

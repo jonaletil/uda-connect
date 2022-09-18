@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message LocationMessage {
+  int32 person_id = 1;
+  float longitude = 2;
+  float latitude = 3;
+}
+
+service LocationService {
+  rpc Create (LocationMessage) returns (LocationMessage);
+}
+
+How to make a sample request
+1. git clone the project
+2. cd modules/location-producer-service/app
+3. python services.py
+4. python writer.py
